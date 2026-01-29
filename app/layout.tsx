@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Party RSVP - You're Invited! 🎉",
-  description: "RSVP to our amazing party! Share your details, dietary preferences, and get ready to have a blast!",
+  title: "Blazing Paddles - Pickleball Court Booking",
+  description: "Book your pickleball court or bay with our easy-to-use credit-based reservation system.",
 };
 
 export default function RootLayout({

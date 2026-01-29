@@ -2,7 +2,18 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0a0a0a;
+  
+  /* Blazin' Paddles Color Scheme - Updated from website */
+  --primary-orange: #ff6b35;
+  --primary-green: #22c55e;
+  --secondary-purple: #9333ea;
+  --dark-navy: #0a0a0a;
+  --dark-gray: #1f2937;
+  --medium-gray: #6b7280;
+  --light-gray: #f9fafb;
+  --border-gray: #e5e7eb;
+  --accent-blue: #3b82f6;
 }
 
 @theme inline {
@@ -10,113 +21,39 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  
+  /* Custom colors for the app */
+  --color-primary-orange: var(--primary-orange);
+  --color-primary-green: var(--primary-green);
+  --color-secondary-purple: var(--secondary-purple);
+  --color-dark-navy: var(--dark-navy);
+  --color-dark-gray: var(--dark-gray);
+  --color-medium-gray: var(--medium-gray);
+  --color-accent-blue: var(--accent-blue);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Fun animations for the party form */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-.animate-fadeIn {
-  animation: fadeIn 0.5s ease-out;
-}
-
-.animate-bounce {
-  animation: bounce 2s infinite;
-}
-
-.party-card {
-  animation: float 3s ease-in-out infinite;
-}
-
-/* Custom scrollbar for a fun touch */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #a855f7, #ec4899);
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #9333ea, #db2777);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
 }
 
 /* Smooth transitions for all interactive elements */
-input, textarea, button, label {
-  transition: all 0.3s ease;
-}
-
-/* Add a subtle glow effect on focus */
-input:focus, textarea:focus {
-  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.1);
-}
-
-/* Fun hover effect for radio/checkbox labels */
-label:has(input[type="radio"]):hover,
-label:has(input[type="checkbox"]):hover {
-  transform: translateX(5px);
+input, textarea, button, select {
+  transition: all 0.2s ease;
 }
 
 /* Custom dropdown styling */
 select {
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23a855f7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 1rem center;
-  background-size: 1.5em;
+  background-size: 1.2em;
   padding-right: 3rem;
 }
 
 select:hover {
-  border-color: #a855f7;
+  border-color: var(--dark-gray);
   cursor: pointer;
-}
-
-select option {
-  padding: 10px;
 }

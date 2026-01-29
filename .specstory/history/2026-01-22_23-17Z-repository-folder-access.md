@@ -1620,3 +1620,144 @@ You're all set! 🎉
 
 ---
 
+_**User (2026-01-22 23:17Z)**_
+
+how do I sync my changes and see them live in vercel?
+
+---
+
+_**Agent (model claude-4.5-sonnet, mode Agent)**_
+
+Great question! To sync your changes to Vercel and see them live, here's what you need to do:
+
+## Step 1: Commit Your Changes to Git
+
+First, let's save your changes to Git:
+
+```bash
+git add .
+```
+
+```bash
+git commit -m "Add party invitation form with dietary preferences and games"
+```
+
+## Step 2: Push to GitHub/GitLab
+
+Push your changes to your remote repository:
+
+```bash
+git push
+```
+
+Or if it's your first push:
+```bash
+git push -u origin main
+```
+
+(Replace `main` with `master` if that's your branch name)
+
+## Step 3: Vercel Will Auto-Deploy! 🚀
+
+If your project is already connected to Vercel:
+- Vercel automatically detects the push
+- It will build and deploy your changes
+- You'll get a preview URL and it will update your production site
+
+---
+
+## If You Haven't Connected to Vercel Yet:
+
+### Option 1: Deploy via Vercel Dashboard
+1. Go to [vercel.com](https://vercel.com)
+2. Sign in with GitHub
+3. Click **"Add New Project"**
+4. Import your repository
+5. Click **"Deploy"**
+
+### Option 2: Deploy via Vercel CLI
+```bash
+npm install -g vercel
+vercel login
+vercel
+```
+
+---
+
+## Quick Check: Is Your Repo Connected to GitHub?
+
+Let me check if you have a remote repository set up:
+
+```bash
+git remote -v
+```
+
+Run this command in your terminal. If you see a GitHub/GitLab URL, you're good to go! If not, you'll need to create a repository first.
+
+Would you like help setting up GitHub or connecting to Vercel? 🚀
+
+---
+
+_**User (2026-01-22 23:17Z)**_
+
+can you chck is repository is connected?
+
+---
+
+_**Agent (model claude-4.5-sonnet, mode Agent)**_
+
+Let me check if your repository is connected to a remote (like GitHub):
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: cd "/Users/scottrust/Desktop/Scott Rust Consulting/Overclock/scot1rust_repo" && git remote -v</summary>
+
+```bash
+cd "/Users/scottrust/Desktop/Scott Rust Consulting/Overclock/scot1rust_repo" && git remote -v
+```
+
+```
+origin	https://github.com/scott1rust/scot1rust_repo.git (fetch)
+origin	https://github.com/scott1rust/scot1rust_repo.git (push)
+
+```
+</details>
+</tool-use>
+
+---
+
+Perfect! ✅ **Yes, your repository IS connected to GitHub!**
+
+Your repo is connected to:
+- **GitHub URL**: `https://github.com/scott1rust/scot1rust_repo.git`
+
+## Now You Can Deploy! Here's What to Do:
+
+### Step 1: Commit Your Changes
+```bash
+git add .
+git commit -m "Add party invitation form with dietary preferences and games dropdown"
+```
+
+### Step 2: Push to GitHub
+```bash
+git push
+```
+
+### Step 3: Connect to Vercel (if not already connected)
+
+**Option A: Via Vercel Dashboard** (Easiest)
+1. Go to [vercel.com](https://vercel.com)
+2. Sign in with your GitHub account
+3. Click **"Add New Project"**
+4. Find `scot1rust_repo` in your repositories
+5. Click **"Import"**
+6. Click **"Deploy"**
+
+After that, every time you `git push`, Vercel will automatically rebuild and deploy your site! 🚀
+
+Would you like me to help you commit and push your changes now?
+
+---
+
